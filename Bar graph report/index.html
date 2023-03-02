@@ -1,0 +1,971 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+    <!-- css file -->
+    <link rel="stylesheet" href="style.css">
+
+    <title>Report</title>
+
+    
+</head>
+<body style="font-family: 'Poppins';">
+
+            <!-- Page 1/23 -->
+
+    <div class="page1-container" style="border: 3px solid#6fd64d;">
+        <div class="page-container">
+            <div class="heading1">
+                <h1>Financial X-ray report</h2>
+            </div>
+            <div class="logo"><img src="primary_logo.png" alt=""></div>
+        </div>
+
+        <div class="name"><h2>Name</h2></div> <!--variable-->
+        <div class="email-number">
+        <div class="email-number">
+            <div class="col-sm-2">
+            </div>
+                <div class="col-sm-8 contact-text">
+                    <p>Email id <br><br>Number</p>          <!--variable-->
+                </div>
+            <div class="col-sm-2">
+            </div>
+        </div>   
+            <div class="heading2">
+                <h1>SCORE  56/100</h2> <!--variable-->
+            </div> 
+        </div> <br> <br> <br>
+        <!-- <div id="myChart" style="width:100%; max-width:600px; height:500px;"></div> -->
+
+        <div style="margin-left: 2px; margin-right: 5px;"> 
+    </style>
+    </head>
+    <body>
+
+      
+
+      <div class="chartCard">
+        <div class="chartBox">
+          <canvas id="myChart" height="160"></canvas>
+        </div>
+      </div>
+      <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/chart.js/dist/chart.umd.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+      <script>
+        
+        Chart.defaults.font.size = 20;
+        
+        const data = [50, 27, 5, 90, 100];
+        const backgroundcolor = [];
+
+        for(i = 0; i < data.length; i++) {
+            if(data[i] < 40) {backgroundcolor.push('red') }
+            if(data[i] >= 40 && data[i] < 70) {backgroundcolor.push('yellow') }
+            if(data[i] >= 70) {backgroundcolor.push('green') }
+        }
+
+        console.log(backgroundcolor);
+
+        const ctx = document.getElementById('myChart');
+        
+        new Chart(ctx, {
+            type: 'bar',
+            data: {
+            labels: ['Saving & Budgeting', 'Investment', 'Insurance', 'Loans', 'Taxation'],
+            datasets: [{
+                label: 'Report',
+                data: data,
+                backgroundColor: backgroundcolor,
+                borderColor: backgroundcolor,
+                borderWidth: 1
+            }]
+            },
+            options: {
+                plugins: {
+                    legend: {
+                        display: false
+                    }
+                },
+                indexAxis: 'y',
+            scales: {
+                x: {
+                beginAtZero: true,
+                min: 0,
+                max: 100,
+                ticks: {
+                    stepSize: 25
+                }
+                }
+            }
+            }
+        });
+
+
+
+
+        
+    //   Chart.defaults.font.size = 20;
+        
+      
+    //   const data = {
+    //     labels: ['Saving & Budgeting', 'Investment', 'Insurance', 'Loans', 'Taxation'],               
+    //     datasets: [{
+    //       label: 'Report',
+    //       data: [50, 27, 5, 90, 100],                                  
+    //       backgroundColor: [
+    //         'rgba(255, 26, 104, 0.2)',
+    //         'rgba(54, 162, 235, 0.2)',
+    //         'rgba(255, 206, 86, 0.2)',
+    //         'rgba(75, 192, 192, 0.2)',
+    //         'rgba(153, 102, 255, 0.2)',
+    //         'rgba(255, 159, 64, 0.2)',
+    //         'rgba(0, 0, 0, 0.2)'
+    //       ],
+    //       borderColor: [
+    //         'rgba(255, 26, 104, 1)',
+    //         'rgba(54, 162, 235, 1)',
+    //         'rgba(255, 206, 86, 1)',
+    //         'rgba(75, 192, 192, 1)',                                                            
+    //         'rgba(153, 102, 255, 1)',
+    //         'rgba(255, 159, 64, 1)',
+    //         'rgba(0, 0, 0, 1)'
+    //       ],
+    //       borderWidth: 1,
+
+    //     }]
+    //   };
+
+  
+      
+    //   const config = {
+    //     type: 'bar',
+    //     data,
+    //     options: {
+    //         indexAxis: 'y',
+    //       scales: {
+    //         x: {
+    //           beginAtZero: true,
+    //           min: 0,
+    //           max: 100,
+    //           ticks: {
+    //             stepSize: 25
+    //           }
+    //         }
+    //       }
+    //     }
+    //   };
+  
+      
+    //   const myChart = new Chart(
+    //     document.getElementById('myChart'),
+    //     config
+    //   );
+  
+      
+    //   const chartVersion = document.getElementById('chartVersion');
+    //   chartVersion.innerText = Chart.version;
+
+
+
+
+      </script>
+
+        </div>
+
+        <div class="bottomdiv" style="height: 300px;"></div>
+        <div class="page-no"><h3>1/23</h3></div>
+        
+    </div>
+
+  
+
+
+    <br><br>
+
+                <!-- Page 2/23 -->
+
+    <div class="page1-container" style="border: 3px solid#6fd64d;">
+        <div class="page-container">
+            <div class="heading1">
+                <h1>What will make your<br>score 100?</h2>
+            </div>
+            <div class="logo"><img src="primary_logo.png" alt=""></div>
+        </div>
+
+      <div> <br> <br>
+            <ol>
+                <li class ="list-points">
+                    Create a budget, it will make you more      <!--variables-->   
+                    disciplined
+                </li> <br>
+                <li class ="list-points">
+                    Goal-based investing is a better approach
+                    to investments
+                </li> <br>   
+                <li class ="list-points">
+                    Create a budget, it will make you more      <!--variables-->   
+                    disciplined
+                </li> <br>
+                <li class ="list-points">
+                    Diversifying investments into more asset
+                    classes
+                </li> <br>
+                <li class ="list-points">
+                    Take the help of a professional for
+                    investments
+                </li> <br> 
+                <li class ="list-points">
+                    Identify the funds required for your
+                    retirement
+                </li> <br>
+                <li class ="list-points">
+                    Create emergency funds
+
+                </li> <br>
+                <li class ="list-points">
+                    Buy life insurance
+                </li> <br>
+
+            </ol>
+
+      </div>
+
+        <div class="bottomdiv" style="height: 200px;"></div>
+        <div class="page-no"><h3>2/23</h3></div>
+        
+    </div>
+
+    <br> <br>
+
+
+                <!-- Page 3/23 -->
+                <div class="page1-container" style="border: 3px solid#6fd64d;">
+                    <div class="page-container">
+                        <div class="heading1">
+                            <h1>Things going well</h2>
+                        </div>
+                        <div class="logo"><img src="primary_logo.png" alt=""></div>
+                    </div>
+            
+                  <div> <br> <br>
+                        <ol>
+                            <li class ="list-points">
+                                The very good saving ratio
+                            </li> <br>
+                            <li class ="list-points">
+                                The investment journey has started
+                            </li> <br>   
+                            <li class ="list-points">
+                                Review of investments
+                            </li> <br>                                                  <!--variables-->
+                            <li class ="list-points">
+                                Saving for retirement
+                            </li> <br>
+                            <li class ="list-points">
+                                No debt on you
+                            </li> <br> 
+                            <li class ="list-points">
+                                Maximising your tax savings
+                            </li> <br>
+            
+                        </ol>
+            
+                  </div>
+            
+                    <div class="bottomdiv" style="height: 200px;"></div>
+                    <div class="page-no"><h3>3/23</h3></div>
+                
+                </div>
+
+                <br> <br>
+    
+                <!-- Page 4/23 -->
+        
+                <div class="page1-container" style="border: 3px solid#6fd64d;">
+                    <div class="page-container">
+                        <div class="heading1">
+                            <h1>Budgeting</h2>
+                        </div>
+                        <div class="logo"><img src="primary_logo.png" alt=""></div>
+                    </div>
+            
+                  <div> <br> <br>
+                       <p class="list-points" style="padding-left: 10px;">
+                        Budgeting is will help you decide how you can
+                        spend, save, and invest your money. With a
+                        budget, you can plan for important financial
+                        decisions and easily cover your expenses. A
+                        budget helps create financial stability.
+                        Following a budget consistently will help you
+                        take control of your finances and build wealth
+                        over the long run.</p> <br>
+
+                        <p class="list-points" style="padding-left: 10px;">
+                            If you don't know how to create a budget,<a href=""> here 
+                            is a link</a> which has tools to help you to create a      
+                            budget.
+                        </p>                                                      <!--variables-->
+                                                                                            
+                  </div>
+            
+                    <div class="bottomdiv" style="height: 200px;"></div>
+                    <div class="page-no"><h3>4/23</h3></div>
+
+                </div>  <br> <br>
+
+
+                
+                <!-- Page 5/23 -->
+
+                <div class="page1-container" style="border: 3px solid#6fd64d;">
+                    <div class="page-container">
+                        <div class="heading1">
+                            <h1>Savings</h2>
+                        </div>
+                        <div class="logo"><img src="primary_logo.png" alt=""></div>
+                    </div>
+            
+                  <div> <br> <br>
+                       <p class="list-points" style="padding-left: 10px;">
+                            Your approach of saving first and then doing
+                            expenses is awesome. Being consistent with
+                            this approach will do wonders in your financial                             <!--variables-->
+                            life.
+                        </p> <br>
+
+                        <p class="list-points" style="padding-left: 10px;">
+                            You are doing good in your savings ratio. Many
+                            people fail to save even 20% of their income.
+                            Keep doing great!
+                        </p>                                                      
+                                                                                            
+                  </div>
+            
+                    <div class="bottomdiv" style="height: 200px;"></div>
+                    <div class="page-no"><h3>5/23</h3></div>
+
+                </div>  <br> <br>
+
+
+                            <!-- Page 6/23 -->
+
+                <div class="page1-container" style="border: 3px solid#6fd64d;">
+                    <div class="page-container">
+                        <div class="heading1">
+                            <h1>Investment<br>Approach</h1><h3 class="heading-no">1/2</h3>
+                        </div>
+                        <div class="logo"><img src="primary_logo.png" alt=""></div>
+                    </div>
+            
+                  <div> <br> <br>
+                       <p class="list-points" style="padding-left: 10px;">
+                            All of us have multiple goals that we work
+                            towards in life such as taking a vacation
+                            abroad, buying a car or house, saving for a                              <!--variables-->
+                            child'
+                            s education or building a retirement fund.
+                        </p> <br>
+
+                        <p class="list-points" style="padding-left: 10px;">
+                            However, in order to fulfil these needs and
+                            aspirations, one needs to make money work in
+                            sync with these goals. This is possible by
+                            adopting goal-based investing.
+                        </p>                                                     
+                                                                                            
+                  </div>
+            
+                    <div class="bottomdiv" style="height: 200px;"></div>
+                    <div class="page-no"><h3>6/23</h3></div>
+
+                </div>  <br> <br>
+                
+                
+                            <!-- Page 7/23 -->
+
+                <div class="page1-container" style="border: 3px solid#6fd64d;">
+                    <div class="page-container">
+                        <div class="heading1">
+                            <h1>Investment<br>Approach</h1><h3 class="heading-no">2/2</h3>
+                        </div>
+                        <div class="logo"><img src="primary_logo.png" alt=""></div>
+                    </div>
+            
+                  <div> <br> <br>
+                       <p class="list-points" style="padding-left: 10px;">
+                        Instead of following the traditional approach of
+                        first creating an investment portfolio and then
+                        using the returns from it to meet goals as they
+                        arise, it is more effective to first identify goals
+                        at different stages of his life and then fund and
+                        invest for each goal separately based on the
+                        time horizon and risk profile.
+                        </p> <br>
+
+                        <p class="list-points" style="padding-left: 10px;">
+                            Read more about why Goal-Based Investing is
+                            the right way and how to do it <a href="">here</a>.     <!--variables-->
+                        </p>                                                      
+                                                                                            
+                  </div>
+            
+                    <div class="bottomdiv" style="height: 200px;"></div>
+                    <div class="page-no"><h3>7/23</h3></div>
+
+                </div>  <br> <br>
+
+
+                            <!-- Page 8/23 -->
+
+                <div class="page1-container" style="border: 3px solid#6fd64d;">
+                    <div class="page-container">
+                        <div class="heading1">
+                            <h1>Investment<br>Diversification</h1><h3 class="heading-no">1/2</h3>
+                        </div>
+                        <div class="logo"><img src="primary_logo.png" alt=""></div>
+                    </div>
+            
+                  <div> <br> <br>
+                       <p class="list-points" style="padding-left: 10px;">
+                        Diversification of an investment portfolio is
+                        extremely important as all asset classes do not
+                        perform well all the time, so one needs to have
+                        investments across multiple assets.
+                        </p> <br>
+
+                        <p class="list-points" style="padding-left: 10px;">
+                            The following image will make you help
+                            understand how different asset classes have
+                            performed over the years.     <!--variables-->
+                        </p>      <br> <br>                                                
+                        
+                        <div class="down-arrow"><img src="down.png" alt=""></div>
+
+                  </div>
+            
+                    <div class="bottomdiv" style="height: 200px;"></div>
+                    <div class="page-no"><h3>8/23</h3></div>
+
+                </div>  <br> <br>
+
+
+                        <!-- Page 9/23 -->
+
+                <div class="page1-container" style="border: 3px solid#6fd64d;">
+                    <div class="page-container">
+                        <div class="heading1">
+                            <h1>Investment<br>Diversification</h1><h3 class="heading-no">2/2</h3>
+                        </div>
+                        <div class="logo"><img src="primary_logo.png" alt=""></div>
+                    </div>
+            
+                  <div> <br> <br>
+                       <p class="list-points" style="padding-left: 10px;">
+                       I M A G E                                                      <!--IMAGE-->
+                        </p> <br>
+
+                        <p class="list-points" style="padding-left: 10px; text-align: center;">
+                        If you need any help diversifying your portfolio, Spring Money is here to help you..   
+                        </p>                                                      
+                                                                                            
+                  </div>
+            
+                    <div class="bottomdiv" style="height: 200px;"></div>
+                    <div class="page-no"><h3>9/23</h3></div>
+
+                </div>  <br> <br>
+
+
+                <!-- Page 10/23 -->
+
+                <div class="page1-container" style="border: 3px solid#6fd64d;">
+                    <div class="page-container">
+                        <div class="heading1">
+                            <h1>Investment<br>Decision Making</h1><h3 class="heading-no">1/3</h3>
+                        </div>
+                        <div class="logo"><img src="primary_logo.png" alt=""></div>
+                    </div>
+            
+                  <div> <br> <br>
+                       <p class="list-points" style="padding-left: 10px;">
+                            The trust in intuition (Gut feeling) is
+                            understandable. People have always sought to
+                            put their faith in mystical forces when
+                            confronted with earthly confusion. But it's also
+                            dangerous.
+                        </p> <br>
+
+                        <p class="list-points" style="padding-left: 10px;">
+                            Most people are happy to give you advice,
+                            whether useful or not. While you usually know
+                            to take such wisdom with a pinch of salt,
+                            sometimes it's too tempting to resist taking
+                            advice from people who swear it has paid off
+                            for them.   
+                        </p>                                                      
+                                                                                            
+                  </div>
+            
+                    <div class="bottomdiv" style="height: 200px;"></div>
+                    <div class="page-no"><h3>10/23</h3></div>
+
+                </div>  <br> <br>
+
+
+                <!-- Page 11/23 -->
+
+                <div class="page1-container" style="border: 3px solid#6fd64d;">
+                    <div class="page-container">
+                        <div class="heading1">
+                            <h1>Investment<br>Decision Making</h1><h3 class="heading-no">2/3</h3>
+                        </div>
+                        <div class="logo"><img src="primary_logo.png" alt=""></div>
+                    </div>
+            
+                  <div> <br> <br>
+                       <p class="list-points" style="padding-left: 10px;">
+                            This is especially common in the case of
+                            financial advice from friends and relatives.
+                            Whether it’s a friend recommending a winning
+                            stock or an older relative telling you that real
+                            estate and gold never fail.
+                        </p> <br>
+
+                        <p class="list-points" style="padding-left: 10px;">
+                            However, free advice, in general, can do more
+                            harm than good. Not only are your friends
+                            unaware of your exact financial situation, most
+                            of the time they are also unqualified to offer
+                            you advice. Often, the advice given by friends
+                            or relatives is based on their personal
+                            experience. So it may be very subjective and
+                            unsuitable for your situation.   
+                        </p>                                                      
+                                                                                            
+                  </div>
+            
+                    <div class="bottomdiv" style="height: 200px;"></div>
+                    <div class="page-no"><h3>11/23</h3></div>
+
+                </div>  <br> <br>
+
+
+                <!-- Page 12/23 -->
+
+                <div class="page1-container" style="border: 3px solid#6fd64d;">
+                    <div class="page-container">
+                        <div class="heading1">
+                            <h1>Investment<br>Decision Making</h1><h3 class="heading-no">3/3</h3>
+                        </div>
+                        <div class="logo"><img src="primary_logo.png" alt=""></div>
+                    </div>
+            
+                  <div> <br> <br>
+                       <p class="list-points" style="padding-left: 10px;">
+                            Read More about “Why you should ignore
+                            investment advice from friends and family?”
+                            <a href="">here</a>.                                                <!--variables-->
+                        </p> <br>
+
+                        <p class="list-points" style="padding-left: 10px;">
+                            As we grow older, we get busier in our day-to-day chores. As we take the help of doctors to
+                            check on our health instead of searching on
+                            Google and YouTube, taking the help of
+                            financial experts is equally important to make
+                            sure that you are getting the best out of your
+                            hard-earned money.   
+                        </p>                                                      
+                                                                                            
+                  </div>
+            
+                    <div class="bottomdiv" style="height: 200px;"></div>
+                    <div class="page-no"><h3>12/23</h3></div>
+
+                </div>  <br> <br>
+
+
+                <!-- Page 13/23 -->
+
+                <div class="page1-container" style="border: 3px solid#6fd64d;">
+                    <div class="page-container">
+                        <div class="heading1">
+                            <h1>Investment<br>Review & Rebalance</h1><h3 class="heading-no">1/2</h3>
+                        </div>
+                        <div class="logo"><img src="primary_logo.png" alt=""></div>
+                    </div>
+            
+                  <div> <br> <br>
+                       <p class="list-points" style="padding-left: 10px;">
+                            You have a good habit of reviewing the
+                            portfolio. But some months markets may
+                            perform very badly, so make sure you don't
+                            make decisions based on short-term
+                            performance, especially when your plan is to
+                            make wealth in long term.
+                        </p> <br>
+
+                        <p class="list-points" style="padding-left: 10px;">
+                            Making changes (rebalancing) in your
+                            portfolio whenever there is a sudden change is
+                            called "Timing the Market".  
+                        </p>                                                      
+                                                                                            
+                  </div>
+            
+                    <div class="bottomdiv" style="height: 200px;"></div>
+                    <div class="page-no"><h3>13/23</h3></div>
+
+                </div>  <br> <br>
+
+
+
+                 <!-- Page 14/23 -->
+
+                 <div class="page1-container" style="border: 3px solid#6fd64d;">
+                    <div class="page-container">
+                        <div class="heading1">
+                            <h1>Investment<br>Review & Rebalance</h1><h3 class="heading-no">2/2</h3>
+                        </div>
+                        <div class="logo"><img src="primary_logo.png" alt=""></div>
+                    </div>
+            
+                  <div> <br> <br>
+                       <p class="list-points" style="padding-left: 10px;">
+                        Often, people tend to make decisions out of
+                        panic or greed in order to avoid losses or make
+                        more money. Unfortunately, timing the market
+                        has not worked even for professional investors
+                        in most cases. One should rebalance the
+                        portfolio periodically considering the long-term view rather than acting upon short-term
+                        changes in the market.
+                        </p> <br>                                                   
+                                                                                            
+                  </div>
+            
+                    <div class="bottomdiv" style="height: 200px;"></div>
+                    <div class="page-no"><h3>14/23</h3></div>
+
+                </div>  <br> <br>
+
+
+             <!-- Page 15/23 -->
+
+             <div class="page1-container" style="border: 3px solid#6fd64d;">
+                <div class="page-container">
+                    <div class="heading1">
+                        <h1>Investment<br>Retirement Plan</h1><h3 class="heading-no"></h3>
+                    </div>
+                    <div class="logo"><img src="primary_logo.png" alt=""></div>
+                </div>
+        
+              <div> <br> <br>
+                   <p class="list-points" style="padding-left: 10px;">
+                        We spend almost 1/3rd of our adult life in the
+                        Retirement period during which we do not
+                        have any active income. Though you have
+                        started investing for your retirement, not
+                        knowing how much money you will need may
+                        derail you.
+                    
+                    </p> <br>
+
+                    <p class="list-points" style="padding-left: 10px;">
+                        Many times it becomes difficult to estimate the
+                        amount required as retirement is a very very
+                        long-term goal and there are a lot of variables.  
+                    </p>   <br>   
+                    
+                    <p class="list-points" style="padding-left: 10px;">
+                       <a href="">Here</a> is a simple calculator which can help you                     <!--variable-->
+                        to give a more clear picture of your retirement.
+                        Still, we suggest taking the help of an expert.  
+                    </p>   <br>
+                                                                                        
+              </div>
+        
+                <div class="bottomdiv" style="height: 200px;"></div>
+                <div class="page-no"><h3>15/23</h3></div>
+
+            </div>  <br> <br>
+    
+
+             <!-- Page 16/23 -->
+
+             <div class="page1-container" style="border: 3px solid#6fd64d;">
+                <div class="page-container">
+                    <div class="heading1">
+                        <h1>Investment<br>Emergency Fund</h1><h3 class="heading-no"></h3>
+                    </div>
+                    <div class="logo"><img src="primary_logo.png" alt=""></div>
+                </div>
+        
+              <div> <br> <br>
+                   <p class="list-points" style="padding-left: 10px;">
+                    The pandemic has shown us that we live in an
+                    uncertain world. There might come a phase in
+                    your life when you won
+                    't be able to earn
+                    anything. The emergency fund in such cases
+                    will be the saviour for you. Read more about
+                    the emergency fund <a href="">here</a>.                             <!--variable-->
+
+                    </p> <br>                                                   
+                                                                                        
+              </div>
+        
+                <div class="bottomdiv" style="height: 200px;"></div>
+                <div class="page-no"><h3>16/23</h3></div>
+
+            </div>  <br> <br>
+
+
+            <!-- Page 17/23 -->
+
+            <div class="page1-container" style="border: 3px solid#6fd64d;">
+                <div class="page-container">
+                    <div class="heading1">
+                        <h1>Investment<br>Life Insurance</h1><h3 class="heading-no">1/2</h3>
+                    </div>
+                    <div class="logo"><img src="primary_logo.png" alt=""></div>
+                </div>
+        
+              <div> <br> <br>
+                   <p class="list-points" style="padding-left: 10px;">
+                        We suggest you buy life insurance as soon as
+                        possible. Life Insurance premiums are cheaper
+                        when you are young as the risk factor of
+                        untimely death is significantly lower compared
+                        to those in higher age groups. And the best
+                        part is the premium continues to be the same
+                        as you grow older.
+                    </p> <br>
+
+                    <p class="list-points" style="padding-left: 10px;">
+                        With growing age, health problems also tend
+                        to increase. In case of any serious illness or
+                        accident, the life insurance company may
+                        reject the insurance proposal at a later age.
+                        Hence, it is very important to buy life insurance
+                        when you are young and healthy. 
+                    </p>                                                      
+                                                                                        
+              </div>
+        
+                <div class="bottomdiv" style="height: 200px;"></div>
+                <div class="page-no"><h3>17/23</h3></div>
+
+            </div>  <br> <br>
+
+
+
+            <!-- Page 18/23 -->
+
+            <div class="page1-container" style="border: 3px solid#6fd64d;">
+                <div class="page-container">
+                    <div class="heading1">
+                        <h1>Investment<br>Life Insurance</h1><h3 class="heading-no">2/2</h3>
+                    </div>
+                    <div class="logo"><img src="primary_logo.png" alt=""></div>
+                </div>
+        
+              <div> <br> <br>
+                   <p class="list-points" style="padding-left: 10px;">
+                   I M A G E                                                      <!--IMAGE-->
+                    </p> <br>
+
+                    <p class="list-points" style="padding-left: 10px; text-align: center;">
+                        *The actual premiums may change from person to person   
+                    </p>                                                      
+                                                                                        
+              </div>
+        
+                <div class="bottomdiv" style="height: 200px;"></div>
+                <div class="page-no"><h3>18/23</h3></div>
+
+            </div>  <br> <br>
+
+
+             <!-- Page 19/23 -->
+
+             <div class="page1-container" style="border: 3px solid#6fd64d;">
+                <div class="page-container">
+                    <div class="heading1">
+                        <h1>Investment<br>Health Insurance</h1><h3 class="heading-no">1/2</h3>
+                    </div>
+                    <div class="logo"><img src="primary_logo.png" alt=""></div>
+                </div>
+        
+              <div> <br> <br>
+                   <p class="list-points" style="padding-left: 10px;">
+                        How will you fill if you are forced to buy a small
+                        hatchback car when you could have easily
+                        afforded your dream 7-seater SUV? That'
+                        s
+                        what a large medical bill does to you.
+                    </p> <br>
+
+                    <p class="list-points" style="padding-left: 10px;">
+                        With growing age, health problems also tend to increase. 
+                        In case of any serious illness or accident, the life insurance company may reject the insurance proposal at a later age. 
+                        Hence, it is very important to buy life insurance when you are young and healthy.
+                    </p>                                                      
+                                                                                        
+              </div>
+        
+                <div class="bottomdiv" style="height: 200px;"></div>
+                <div class="page-no"><h3>19/23</h3></div>
+
+            </div>  <br> <br>
+
+
+            <!-- Page 20/23 -->
+
+            <div class="page1-container" style="border: 3px solid#6fd64d;">
+                <div class="page-container">
+                    <div class="heading1">
+                        <h1>Investment<br>Health Insurance</h1><h3 class="heading-no">2/2</h3>
+                    </div>
+                    <div class="logo"><img src="primary_logo.png" alt=""></div>
+                </div>
+        
+              <div> <br> <br>
+                   <p class="list-points" style="padding-left: 10px;">
+                        A good health insurance plan can protect you
+                        from this financial blow to your savings and
+                        provide you with the much-needed cushion to
+                        bear the costs towards doctor's visits, tests,
+                        medicines and other procedures.                             <!--variable-->
+
+                    </p> <br>                                                   
+                                                                                        
+              </div>
+        
+                <div class="bottomdiv" style="height: 200px;"></div>
+                <div class="page-no"><h3>20/23</h3></div>
+
+            </div>  <br> <br>
+
+
+             <!-- Page 21/23 -->
+
+             <div class="page1-container" style="border: 3px solid#6fd64d;">
+                <div class="page-container">
+                    <div class="heading1">
+                        <h1>Loans</h1><h3 class="heading-no">1/2</h3>
+                    </div>
+                    <div class="logo"><img src="primary_logo.png" alt=""></div>
+                </div>
+        
+              <div> <br> <br>
+                   <p class="list-points" style="padding-left: 10px;">
+                        For many, living debt free is a dream that
+                        unfortunately may feel far from reality. You are
+                        already living a dream of billions. Kudos to you!
+                    
+                    </p> <br>
+
+                    <p class="list-points" style="padding-left: 10px;">
+                        If you are not planning to take any loan in
+                        future, you can use this opportunity to start
+                        that venture you always dreamt of or maybe
+                        even plan for early retirement.  
+                    </p>   <br>   
+                    
+                    <p class="list-points" style="padding-left: 10px;">
+                        Using a credit card is not a bad habit, using a
+                        credit card to purchase things that are beyond
+                        your means is a bad habit.  
+                    </p>   <br>
+                                                                                        
+              </div>
+        
+                <div class="bottomdiv" style="height: 200px;"></div>
+                <div class="page-no"><h3>21/23</h3></div>
+
+            </div>  <br> <br>
+
+
+            <!-- Page 22/23 -->
+
+            <div class="page1-container" style="border: 3px solid#6fd64d;">
+                <div class="page-container">
+                    <div class="heading1">
+                        <h1>Loans</h1><h3 class="heading-no">2/2</h3>
+                    </div>
+                    <div class="logo"><img src="primary_logo.png" alt=""></div>
+                </div>
+        
+              <div> <br> <br>
+                   <p class="list-points" style="padding-left: 10px;">
+                        Using a credit card and paying the full bill on
+                        the due date is a good way to build & maintain
+                        your credit score. Further, many credit cards
+                        have offers with respect to your regular
+                        purchases and can give you 0.2-1.0%
+                        rewards/cashback/discounts.
+                    
+                    </p> <br>
+
+                    <p class="list-points" style="padding-left: 10px;">
+                        Not taking loans/using BNPL while shopping
+                        clearly shows that you are spending within
+                        your limits. Keep up this good habit.
+                    </p>                                                      
+                                                                                        
+              </div>
+        
+                <div class="bottomdiv" style="height: 200px;"></div>
+                <div class="page-no"><h3>22/23</h3></div>
+
+            </div>  <br> <br>
+
+
+             <!-- Page 23/23 -->
+
+             <div class="page1-container" style="border: 3px solid#6fd64d;">
+                <div class="page-container">
+                    <div class="heading1">
+                        <h1>Taxation</h1><h3 class="heading-no"></h3>
+                    </div>
+                    <div class="logo"><img src="primary_logo.png" alt=""></div>
+                </div>
+        
+              <div> <br> <br>
+                   <p class="list-points" style="padding-left: 10px;">
+                        You are already doing great in taxation, we
+                        don't have anything to tell where you can
+                        improve.
+                    
+                    </p> <br>                                                     
+                                                                                        
+              </div>
+        
+                <div class="bottomdiv" style="height: 200px;"></div>
+                <div class="page-no"><h3>23/23</h3></div>
+
+            </div>  <br> <br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+</body>
+</html> 
