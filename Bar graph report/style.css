@@ -72,7 +72,20 @@
    font-size: 25px;
 }
 
-.page-no{
+/* @media screen{ */
+    body {
+        counter-reset: page;
+      }
+    /* .page-no{
+        counter-reset: page;
+    } */
+     .page-no > h3::before {
+        counter-increment: page;
+        content: "Page " counter(page);
+      }
+/* } */
+
+.page-no{   
     text-align: right;
     padding-right: 20px;
 }
