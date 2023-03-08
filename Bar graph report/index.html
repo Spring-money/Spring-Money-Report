@@ -196,6 +196,8 @@
 
                 <!-- Page 2/23 -->
 
+
+
     <div class="page1-container" style="border: 3px solid#6fd64d;">
         <div class="page-container">
             <div class="heading1">
@@ -205,9 +207,9 @@
         </div>
 
       <div> <br> <br>
-            <ol>
-                <li class ="list-points">
-                    Create a budget, it will make you more      <!--variables-->   
+            <ol id = "listPoints_1">
+                <!-- <li class ="list-points">
+                    Create a budget, it will make you more        
                     disciplined
                 </li> <br>
                 <li class ="list-points">
@@ -215,7 +217,7 @@
                     to investments
                 </li> <br>   
                 <li class ="list-points">
-                    Create a budget, it will make you more      <!--variables-->   
+                    Create a budget, it will make you more        
                     disciplined
                 </li> <br>
                 <li class ="list-points">
@@ -236,7 +238,7 @@
                 </li> <br>
                 <li class ="list-points">
                     Buy life insurance
-                </li> <br>
+                </li> <br> -->
 
             </ol>
 
@@ -262,7 +264,7 @@
                     </div>
             
                   <div> <br> <br>
-                        <ol>
+                        <ol id = listPoints_2>
                             <li class ="list-points">
                                 The very good saving ratio
                             </li> <br>
@@ -306,21 +308,21 @@
                     </div>
             
                   <div> <br> <br>
-                       <p class="list-points" style="padding-left: 10px;">
-                        Budgeting is will help you decide how you can
+                       <p class="list-points" id="p1-budgeting" style="padding-left: 10px;">
+                        <!-- Budgeting is will help you decide how you can
                         spend, save, and invest your money. With a
                         budget, you can plan for important financial
                         decisions and easily cover your expenses. A
                         budget helps create financial stability.
                         Following a budget consistently will help you
                         take control of your finances and build wealth
-                        over the long run.</p> <br>
+                        over the long run. -->
+                    </p> <br>
 
-                        <p class="list-points" style="padding-left: 10px;">
+                        <p class="list-points" id="p2-budgeting" style="padding-left: 10px;">
                             If you don't know how to create a budget,<a href=""> here 
                             is a link</a> which has tools to help you to create a      
                             budget.
-                        </p>                                                      <!--variables-->
                                                                                             
                   </div>
             
@@ -972,6 +974,49 @@
 
 
 
+
+
+            <script>
+                //script for paragraph pages
+
+                var para_item = new Map()
+                para_item.set("p1-budgeting", "Budgeting is will help you decide how you can spend, save, and invest your money. With a budget, you can plan for important financial decisions and easily cover your expenses. A budget helps create financial stability. Following a budget consistently will help you take control of your finances and build wealth over the long run.")
+                para_item.set("p2-budgeting", "")
+                document.getElementById("p1-budgeting").innerHTML = para_item.get("p1-budgeting")
+                document.getElementById("p2-budgeting").innerHTML = para_item.get("p2-budgeting")
+
+
+                // para_item.forEach(setParagraph(key, value))
+                // function setParagraph(key, value)
+                // {
+                //     document.getElementById(key).innerHTML = value
+                // }
+
+
+
+                //script for 1st list page
+                var item_list = ["Create a budget, it will make you more disciplined", "Goal-based investing is a better approach to investments", "Diversifying investments into more asset classes", "Take the help of a professional forinvestments", "Create emergency funds", "Buy life insurance"]
+                var od_html = "";
+                for (var i = 0; i < item_list.length; i++) {
+                    od_html = od_html + "<li class =\"list-points\">" + item_list[i] + "</li> <br>"
+                }
+                document.getElementById("listPoints_1").innerHTML = od_html;
+                console.log(od_html)
+
+
+
+
+
+
+                //script for 2nd list page
+                var item_list = ["The very good saving ratio", "The investment journey has started", "Review of investments", "Saving for retirement", "No debt on you", "Buy life insurance", "Maximising your tax savings"]
+                var od_html = "";
+                for (var i = 0; i < item_list.length; i++) {
+                    od_html = od_html + "<li class =\"list-points\">" + item_list[i] + "</li> <br>"
+                }
+                document.getElementById("listPoints_2").innerHTML = od_html;
+                console.log(od_html)
+            </script>
 
 
 
