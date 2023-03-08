@@ -346,11 +346,11 @@
                     </div>
             
                   <div> <br> <br>
-                       <p class="list-points" style="padding-left: 10px;">
-                            Your approach of saving first and then doing
+                       <p class="list-points" id="p1-savings" style="padding-left: 10px;">
+                            <!-- Your approach of saving first and then doing
                             expenses is awesome. Being consistent with
-                            this approach will do wonders in your financial                             <!--variables-->
-                            life.
+                            this approach will do wonders in your financial                           
+                            life. -->
                         </p> <br>
 
                         <p class="list-points" style="padding-left: 10px;">
@@ -982,26 +982,28 @@
                 var para_item = new Map()
                 para_item.set("p1-budgeting", "Budgeting is will help you decide how you can spend, save, and invest your money. With a budget, you can plan for important financial decisions and easily cover your expenses. A budget helps create financial stability. Following a budget consistently will help you take control of your finances and build wealth over the long run.")
                 para_item.set("p2-budgeting", "")
-                document.getElementById("p1-budgeting").innerHTML = para_item.get("p1-budgeting")
-                document.getElementById("p2-budgeting").innerHTML = para_item.get("p2-budgeting")
 
 
-                // para_item.forEach(setParagraph(key, value))
-                // function setParagraph(key, value)
-                // {
-                //     document.getElementById(key).innerHTML = value
-                // }
+                para_item.set("p1-savings", " Your approach of saving first and then doing expenses is awesome. Being consistent with this approach will do wonders in your financial life.")
+                // document.getElementById("p1-budgeting").innerHTML = para_item.get("p1-budgeting")
+                // document.getElementById("p2-budgeting").innerHTML = para_item.get("p2-budgeting")
+
+                para_item.forEach(setParagraph)
+                function setParagraph(value, key, map)
+                {
+                    document.getElementById(key).innerHTML = value
+                }
 
 
 
                 //script for 1st list page
                 var item_list = ["Create a budget, it will make you more disciplined", "Goal-based investing is a better approach to investments", "Diversifying investments into more asset classes", "Take the help of a professional forinvestments", "Create emergency funds", "Buy life insurance"]
-                var od_html = "";
+                var ol_html = "";
                 for (var i = 0; i < item_list.length; i++) {
-                    od_html = od_html + "<li class =\"list-points\">" + item_list[i] + "</li> <br>"
+                    ol_html = ol_html + "<li class =\"list-points\">" + item_list[i] + "</li> <br>"
                 }
-                document.getElementById("listPoints_1").innerHTML = od_html;
-                console.log(od_html)
+                document.getElementById("listPoints_1").innerHTML = ol_html;
+                console.log(ol_html)
 
 
 
