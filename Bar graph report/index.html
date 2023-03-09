@@ -114,68 +114,7 @@
 
 
         
-    //   Chart.defaults.font.size = 20;
-        
-      
-    //   const data = {
-    //     labels: ['Saving & Budgeting', 'Investment', 'Insurance', 'Loans', 'Taxation'],               
-    //     datasets: [{
-    //       label: 'Report',
-    //       data: [50, 27, 5, 90, 100],                                  
-    //       backgroundColor: [
-    //         'rgba(255, 26, 104, 0.2)',
-    //         'rgba(54, 162, 235, 0.2)',
-    //         'rgba(255, 206, 86, 0.2)',
-    //         'rgba(75, 192, 192, 0.2)',
-    //         'rgba(153, 102, 255, 0.2)',
-    //         'rgba(255, 159, 64, 0.2)',
-    //         'rgba(0, 0, 0, 0.2)'
-    //       ],
-    //       borderColor: [
-    //         'rgba(255, 26, 104, 1)',
-    //         'rgba(54, 162, 235, 1)',
-    //         'rgba(255, 206, 86, 1)',
-    //         'rgba(75, 192, 192, 1)',                                                            
-    //         'rgba(153, 102, 255, 1)',
-    //         'rgba(255, 159, 64, 1)',
-    //         'rgba(0, 0, 0, 1)'
-    //       ],
-    //       borderWidth: 1,
-
-    //     }]
-    //   };
-
-  
-      
-    //   const config = {
-    //     type: 'bar',
-    //     data,
-    //     options: {
-    //         indexAxis: 'y',
-    //       scales: {
-    //         x: {
-    //           beginAtZero: true,
-    //           min: 0,
-    //           max: 100,
-    //           ticks: {
-    //             stepSize: 25
-    //           }
-    //         }
-    //       }
-    //     }
-    //   };
-  
-      
-    //   const myChart = new Chart(
-    //     document.getElementById('myChart'),
-    //     config
-    //   );
-  
-      
-    //   const chartVersion = document.getElementById('chartVersion');
-    //   chartVersion.innerText = Chart.version;
-
-
+   
 
 
       </script>
@@ -208,37 +147,7 @@
 
       <div> <br> <br>
             <ol id = "listPoints_1">
-                <!-- <li class ="list-points">
-                    Create a budget, it will make you more        
-                    disciplined
-                </li> <br>
-                <li class ="list-points">
-                    Goal-based investing is a better approach
-                    to investments
-                </li> <br>   
-                <li class ="list-points">
-                    Create a budget, it will make you more        
-                    disciplined
-                </li> <br>
-                <li class ="list-points">
-                    Diversifying investments into more asset
-                    classes
-                </li> <br>
-                <li class ="list-points">
-                    Take the help of a professional for
-                    investments
-                </li> <br> 
-                <li class ="list-points">
-                    Identify the funds required for your
-                    retirement
-                </li> <br>
-                <li class ="list-points">
-                    Create emergency funds
-
-                </li> <br>
-                <li class ="list-points">
-                    Buy life insurance
-                </li> <br> -->
+               
 
             </ol>
 
@@ -265,24 +174,7 @@
             
                   <div> <br> <br>
                         <ol id = listPoints_2>
-                            <!-- <li class ="list-points">
-                                The very good saving ratio
-                            </li> <br>
-                            <li class ="list-points">
-                                The investment journey has started
-                            </li> <br>   
-                            <li class ="list-points">
-                                Review of investments
-                            </li> <br>                                                
-                            <li class ="list-points">
-                                Saving for retirement
-                            </li> <br>
-                            <li class ="list-points">
-                                No debt on you
-                            </li> <br> 
-                            <li class ="list-points">
-                                Maximising your tax savings
-                            </li> <br> -->
+                           
             
                         </ol>
             
@@ -985,7 +877,11 @@
                 // heading_html = page_heading[0]
                 // document.getElementById("budgeting").innerHTML = heading_html;
                 
-                var dict = {"budgeting": [{"sub_categories": "budgeting_1", "detailed_summary": "Budgeting is will help you decide how you can spend, save, and invest your money. With a budget, you can plan for important financial decisions and easily cover your expenses. A budget helps create financial stability. Following a budget consistently will help you take control of your finances and build wealth over the long run.", "image_url": "https://website.springmoney.in/", "related_article_url": "https://website.springmoney.in/"}]}
+                var dict = {"Budgeting": [{"sub_categories": "budgeting 1", "detailed_summary": "Budgeting is will help you decide how you can spend, save, and invest your money. With a budget, you can plan for important financial decisions and easily cover your expenses. A budget helps create financial stability. Following a budget consistently will help you take control of your finances and build wealth over the long run.", "image_url": "https://website.springmoney.in/", "related_article_url": "https://website.springmoney.in/"},
+                {"sub_categories": "budgeting 1", "detailed_summary": "Budgeting point 2 point 2 point 2  ", "image_url": "https://website.springmoney.in/", "related_article_url": "https://website.springmoney.in/"}],
+                "Savings": [{"sub_categories": "savings 1", "detailed_summary": "Savings is will point 2 point 2 point 2.", "image_url": "https://website.springmoney.in/", "related_article_url": "https://website.springmoney.in/"},
+                {"sub_categories": "savings 1", "detailed_summary": "Savings is will help you decide how you can spend, save, and invest your money. With a budget, you can plan for important financial decisions and easily cover your expenses. A budget helps create financial stability. Following a budget consistently will help you take control of your finances and build wealth over the long run.", "image_url": "https://website.springmoney.in/", "related_article_url": "https://website.springmoney.in/"}]
+            }
 
                 
 
@@ -998,16 +894,17 @@
                 para_item.set("p1-savings", " Your approach of saving first and then doing expenses is awesome. Being consistent with this approach will do wonders in your financial life.")
                 para_item.set("p2-savings", " You are doing good in your savings ratio. Many people fail to save even 20% of their income. Keep doing great!.")
 
-
-                dict.forEach(setParagraph)
-                function setParagraph(value, key, map){
+                var page_html = "";
+                for (let key in dict){
                     page_html = page_html + "<div class=\"page-container\"> <div class=\"heading1\"> <h1>"+key+"</h2> </div> <div class=\"logo\"><img src=\"primary_logo.png\" alt=\"\"></div> </div>"
-                        for (var i = 0; i < value.length; i++){
-                            page_html = page_html + "<div> <br> <br> <p class=\"list-points\" id=\"p1-savings\" style=\"padding-left: 10px;\">"+value[i]["detailed_summary"]+" </p> <br> </div>"
+                        for (var i = 0; i < dict[key].length; i++){
+                            page_html = page_html + "<div> <br> <br> <p class=\"list-points\" id=\"p1-savings\" style=\"padding-left: 10px;\">"+dict[key][i]["detailed_summary"]+" </p> <br> </div>"
                         }
                          page_html = page_html + "<div class=\"bottomdiv\" style=\"height: 200px;\"></div> <div class=\"page-no\"><h3></h3></div>"
+                         console.log(page_html)
+                         document.getElementById("page_id").innerHTML = page_html;
                 }
-                document.getElementById("page_id").innerHTML = page_html;
+                // document.getElementById("page_id").innerHTML = page_html;
 
 
                 // document.getElementById("p1-budgeting").innerHTML = para_item.get("p1-budgeting")
