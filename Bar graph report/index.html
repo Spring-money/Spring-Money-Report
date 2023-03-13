@@ -24,7 +24,7 @@
     <div class="page1-container" style="border: 3px solid#6fd64d;">
         <div class="page-container">
             <div class="heading1">
-                <h1>Financial X-ray report</h2>
+                <h1>Financial X-ray report</h1>
             </div>
             <div class="logo"><img src="primary_logo.png" alt=""></div>
         </div>
@@ -42,7 +42,7 @@
             </div>
         </div>   
             <div class="heading2">
-                <h1>SCORE  56/100</h2> <!--variable-->
+                <h1>SCORE  56/100</h1> <!--variable-->
             </div> 
         </div> <br> <br> <br>
         <!-- <div id="myChart" style="width:100%; max-width:600px; height:500px;"></div> -->
@@ -140,7 +140,7 @@
     <div class="page1-container" style="border: 3px solid#6fd64d;">
         <div class="page-container">
             <div class="heading1">
-                <h1>What will make your<br>score 100?</h2>
+                <h1>What will make your<br>score 100?</h1>
             </div>
             <div class="logo"><img src="primary_logo.png" alt=""></div>
         </div>
@@ -167,7 +167,7 @@
                 <div class="page1-container" style="border: 3px solid#6fd64d;">
                     <div class="page-container">
                         <div class="heading1">
-                            <h1>Things going well</h2>
+                            <h1>Things going well</h1>
                         </div>
                         <div class="logo"><img src="primary_logo.png" alt=""></div>
                     </div>
@@ -308,7 +308,7 @@
                             page_html = page_html + "<div class=\"page-border\" style=\"border: 3px solid#6fd64d;\"><div class=\"page-container\"> <div class=\"heading1\"> <h1>"+key+" <br <h3>"+""+"</h3></h1> <br> <br>  </div>   <br><div><div class=\"logo\"><img src=\"primary_logo.png\" alt=\"\"></div> </div> </div> "
                                         for (var i = 0; i < dict[key].length; i++){
                                             if(dict[key][i]["sub_categories"] == null || dict[key][i]["sub_categories"].length <= 0){
-                                                page_html = page_html + "<div> <br> <br> <p class=\"list-points\" id=\"p1-savings\" style=\"padding-left: 10px;\">"+dict[key][i]["detailed_summary"]+" </p> <br> </div>"
+                                                page_html = page_html + "<div> <br> <p class=\"list-points\" id=\"p1-savings\" style=\"padding-left: 10px;\">"+dict[key][i]["detailed_summary"]+" </p> <br> </div>"
                                             }
                                         }
                                         page_html = page_html+ "<div class=\"bottomdiv\" style=\"height: 200px;\"></div> <div class=\"page-no\"><h3></h3></div></div><br> <br>"
@@ -324,7 +324,7 @@
                                     page_html = page_html + "<div class=\"page-border\" style=\"border: 3px solid#6fd64d;\"><div class=\"page-container\"> <div class=\"heading1\"> <h1>"+key+" <br <h3>"+value+"</h3></h1> <br> <br>  </div>   <br><div><div class=\"logo\"><img src=\"primary_logo.png\" alt=\"\"></div> </div> </div> "
                                         for (var i = 0; i < dict[key].length; i++){
                                             if(dict[key][i]["sub_categories"] != null && dict[key][i]["sub_categories"] == value){
-                                                page_html = page_html + "<div> <br> <br> <p class=\"list-points\" id=\"p1-savings\" style=\"padding-left: 10px;\">"+dict[key][i]["detailed_summary"]+" </p> <br> </div>"
+                                                page_html = page_html + "<div> <br> <p class=\"list-points\" id=\"p1-savings\" style=\"padding-left: 10px;\">"+dict[key][i]["detailed_summary"]+" </p> <br> </div>"
                                             }
                                         }
                                         page_html = page_html+ "<div class=\"bottomdiv\" style=\"height: 200px;\"></div> <div class=\"page-no\"><h3></h3></div></div><br> <br>"
